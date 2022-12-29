@@ -1,0 +1,1 @@
+add_post_query = "INSERT INTO posts (url, data) VALUES (?, ?)"

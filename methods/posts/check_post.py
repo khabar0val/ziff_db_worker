@@ -1,0 +1,1 @@
+check_post_query = "SELECT * FROM post WHERE url = ?"

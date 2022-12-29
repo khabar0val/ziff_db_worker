@@ -1,0 +1,1 @@
+check_user_query = "SELECT * from users WHERE username = ?"
