@@ -1,22 +1,22 @@
 from connector import connection
 
-from src.models.methods.auth.add_user import add_user_query
-from src.models.methods.auth.check_user import check_user_query
+import src.db.methods.auth.add_user as add
+import src.db.methods.auth.check_user as check
 
 def sign_up(username, password):
     with connection.cursor() as cursor:
-        query = cursor.execute(check_user_query, username)
+        query = cursor.execute(check.check_user_query, username)
         user = query.fetchone()
 
         if user:
             print("username is already taken")
 
         else:
-            cursor.execute(add_user_query, username, password)
+            cursor.execute(add.add_user_query, username, password)
 
 def login(username, password):
     with connection.cursor() as cursor:
-        query = cursor.execute(check_user_query, username)
+        query = cursor.execute(check.check_user_query, username)
         user = query.fetchone()
 
         if user:

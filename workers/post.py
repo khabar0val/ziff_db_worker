@@ -1,7 +1,7 @@
 from connector import connection
 
-from src.models.methods.posts.add_post import add_post_query
-from src.models.methods.posts.check_post import check_post_query
+from src.db.methods.posts.add_post import add_post_query
+from src.db.methods.posts.check_post import check_post_query
 
 def add_post(url, data):
     with connection.cursor() as cursor:
